@@ -1,8 +1,7 @@
-#### 1.1 limma
-#### goal: to calculate the most accurate KEAP1-NRF2 signature
+#### Run differential expression analysis using Limma
 #### use blocking term to block cell lines
 
-rm(list=ls()) # remove all unnecessary intermediate data
+rm(list=ls()) 
 
 # change the directory to the 
 setwd("~/Library/CloudStorage/Dropbox/Der lab/RNA seq/All_data_recalculation")
