@@ -67,7 +67,7 @@ for sample in "${sample_list[@]}"; do
 
 
     # Run STAR mapping for each sample
-    STAR --runThreadN 30 \
+    STAR --runThreadN 32 \
          --genomeDir /work/users/w/h/whchang/RNA_seq/Reference/index \
          --readFilesIn ${trim_fq1} ${trim_fq2} \
          --outFileNamePrefix ${output_dir}/mapping_${sample}_ \
