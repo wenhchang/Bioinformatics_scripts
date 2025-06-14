@@ -21,11 +21,11 @@ This repository contains a RNA-seq data analysis pipeline designed for bulk tran
 ####### An example R Markdown summary report is available upon reasonable request. ######
 #########################################################################################
 
-## 📁 Directory Overview
+## Directory Overview
 
 This folder includes the following components:
 
-### 🔧 Shell Scripts
+### Shell Scripts
 - `FastQC.sh`  
   Perform quality control on raw FASTQ files using **FastQC**.
 
@@ -38,7 +38,7 @@ This folder includes the following components:
   - Read alignment with **STAR**
   - Gene-level quantification with **featureCounts**
 
-### 🧬 R Scripts
+### R Scripts
 
 #### [0.X] Preprocessing and Normalization
 - `0.1_biomart.R`: Retrieve gene annotations using `biomaRt`.
