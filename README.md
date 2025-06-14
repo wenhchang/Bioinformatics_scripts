@@ -1,0 +1,84 @@
+# RNAseq Analysis Pipeline
+
+This repository contains a RNA-seq data analysis pipeline designed for bulk transcriptomic profiling. It integrates shell-based preprocessing (on HPC clusters) with R-based downstream analysis to support a wide range of experimental designs and biological questions.
+
+### Workflow Overview
+
+**The following steps are carried out in an HPC environment:**
+
+1. **Quality control (QC)** of raw FASTQ files using `FastQC` to assess sequence quality, GC content, adapter contamination, etc.
+2. **Read alignment** to the reference genome using `STAR`. This includes a script to build the STAR genome index and to run alignment in two-pass mode.
+3. **Read quantification** using `featureCounts` to generate a gene-level raw count matrix for all samples.
+
+**Following alignment, downstream analysis is performed in R:**
+
+1. **Differential expression analysis** using either `DESeq2` or `limma`, depending on the experimental design (e.g., with or without batch/blocking terms).
+2. **Pathway enrichment analysis**, including Gene Set Enrichment Analysis (GSEA) and Overrepresentation Analysis (ORA), to interpret gene expression changes in the context of known biological pathways.
+3. **Functional profiling and integration** with external datasets such as TCGA (for clinical correlation) and DepMap (for gene dependency analysis), as well as gene overlap visualization using Euler plots.
+4. **Resistance-related analysis**, including identification of pathways or genes associated with resistance phenotypes.
+
+#########################################################################################
+####### An example R Markdown summary report is available upon reasonable request. ######
+#########################################################################################
+
+## 📁 Directory Overview
+
+This folder includes the following components:
+
+### 🔧 Shell Scripts
+- `FastQC.sh`  
+  Perform quality control on raw FASTQ files using **FastQC**.
+
+- `STAR_index.sh`  
+  Generate genome index files for STAR alignment using reference genome and GTF annotation.
+
+- `STAR_FC.sh`  
+  Full pipeline for:
+  - Adapter trimming with **cutadapt**
+  - Read alignment with **STAR**
+  - Gene-level quantification with **featureCounts**
+
+### 🧬 R Scripts
+
+#### [0.X] Preprocessing and Normalization
+- `0.1_biomart.R`: Retrieve gene annotations using `biomaRt`.
+- `0.2_combine_count_table.R`: Merge multiple count matrices into a single expression table.
+- `0.3_TPM_conversion.R`: Convert raw counts to TPM values.
+
+#### [1.] Differential Expression Analysis
+- `1.1_DEseq2_LFCS.R`: Perform DE analysis using DESeq2.
+- `1.2_Limma_blocking_term.R`: Limma-based DE analysis with blocking terms.
+- `1.5_Volcanoplots_with_other_signatures.R`: Visualization of differential genes with external gene sets.
+
+#### [2.] Pathway and Signature Analysis
+- `2.0_GSEA_ORA.R`: Gene set enrichment analysis (GSEA) and overrepresentation analysis.
+- `2.5_visualization_GSEA_Hallmark.R`: Custom visualization of hallmark GSEA results.
+
+#### [3.–6.] Functional, TCGA, and DepMap Analysis
+- `3.0_resistance analysis.R`: Analysis related to drug resistance (e.g., gene scores, clustering).
+- `4.0_Euler_diagrams.R`: Generate Euler plots for gene set overlaps.
+- `5.0_TCGA_analysis.R`: Use TCGA datasets for clinical or expression-based correlation.
+- `6.0_DepMap_analysis.R`: Analyze gene dependency data from the DepMap portal.
+
+---
+
+## Requirements
+
+- R (≥ 4.1.0)
+- STAR aligner
+- Subread (for featureCounts)
+- Cutadapt
+- FastQC
+
+---
+
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](../LICENSE) file for details.
+
+---
+
+## Author
+
+Wen-Hsuan Chang  
