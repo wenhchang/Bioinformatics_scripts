@@ -1,13 +1,16 @@
-#### covert raw count to TPM
+#### 0.3 covert raw counts to TPM
 
 rm(list = ls())
+
+# load library 
 library(tidyverse)
 
 #  Define inputs 
 sample_names <- c("SW1990", "PANC1", "Pa16C", "Pa14C_new")
 gene_length <- read.csv("ref/gene_lengths_v44_240328.csv")
+
 ##########################
-# TPM conversion function 
+# Run TPM conversion 
 ##########################
 
 ## process one sample at a time

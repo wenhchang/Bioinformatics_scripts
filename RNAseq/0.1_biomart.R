@@ -1,4 +1,6 @@
-#### 0. acquire ensembl id and gene symbols from biomart
+#### 0.1 acquire ensembl id and gene symbols from biomart
+
+# load necessary packages
 
 library(biomaRt)
 library(tidyverse)

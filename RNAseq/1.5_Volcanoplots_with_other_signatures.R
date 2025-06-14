@@ -1,6 +1,7 @@
-#### make volcano plot using results from Limma DE analysis and overlap the volcano plot with other known signatures
+#### 1.5 make volcano plot using results from Limma DE analysis 
+#### and overlap the volcano plot with other known signatures
+
 rm(list = ls())
-setwd("directory")
 
 # load necessary packages
 library(tidyverse)

@@ -1,7 +1,6 @@
-# Run GSEA and Over-representation analysis (ORA)
+# 2.0 Run GSEA and Over-representation analysis (ORA)
 
 rm(list = ls())                             
-setwd("directory")
 
 # load necessary packages
 library(tidyverse)

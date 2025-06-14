@@ -1,9 +1,8 @@
-#### combine data directly after STAR mapping to a single count table
-#### TPM conversion
+#### 0.2 combine results directly after STAR mapping and featureCounts to a single count table
 
 rm(list=ls()) 
 
-setwd("D:/Dropbox/Der lab/RNA seq/All_data_recalculation")
+# load necessary packages
 
 library(tidyverse)
 

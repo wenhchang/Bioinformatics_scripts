@@ -1,5 +1,4 @@
-#### Run differential expression analysis using DESeq2
-
+#### 1.1 Run differential expression analysis using DESeq2 with log2 fold change shrinkage
 
 rm(list = ls())
 

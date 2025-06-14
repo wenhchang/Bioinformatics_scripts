@@ -1,4 +1,4 @@
-#### DepMap analysis: use DepMap dependency scores database to determine whether topp 200 KEAP1-NRF2 genes
+#### 6.0 DepMap analysis: use DepMap dependency scores database to determine whether topp 200 KEAP1-NRF2 genes
 #### are essential genes in PDAC and lung cancer cell lines
 
 rm(list = ls())

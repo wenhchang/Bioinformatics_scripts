@@ -1,6 +1,8 @@
+#### 2.5 visualize GSEA analysis for DE results of each cell line
+
 rm(list = ls()) #clear the environment
 
-#load pakcages
+# load necessary packages
 library(tidyverse)
 
 # load data

@@ -1,6 +1,7 @@
 # RNAseq Analysis Pipeline
 
 This repository contains a RNA-seq data analysis pipeline designed for bulk transcriptomic profiling. It integrates shell-based preprocessing (on HPC clusters) with R-based downstream analysis to support a wide range of experimental designs and biological questions.
+This repository is designed as templates for RNA-seq analysis and does NOT contain the reference data tables used in each script. The reference data table and an example R markdown summary file are available upon reasonable request.
 
 ### Workflow Overview
 
@@ -17,9 +18,11 @@ This repository contains a RNA-seq data analysis pipeline designed for bulk tran
 3. **Functional profiling and integration** with external datasets such as TCGA (for clinical correlation) and DepMap (for gene dependency analysis), as well as gene overlap visualization using Euler plots.
 4. **Resistance-related analysis**, including identification of pathways or genes associated with resistance phenotypes.
 
-#########################################################################################
-####### An example R Markdown summary report is available upon reasonable request. ######
-#########################################################################################
+
+### NOTE ###
+###################################################################################################
+####### An example R Markdown summary report and reference files are available upon request. ######
+###################################################################################################
 
 ## 📁 Directory Overview
 
@@ -82,3 +85,4 @@ This project is licensed under the MIT License. See the [LICENSE](../LICENSE) fi
 ## Author
 
 Wen-Hsuan Chang  
+wenhsuanc@icloud.com
