@@ -24,11 +24,11 @@ This repository is designed as templates for RNA-seq analysis and does NOT conta
 ####### An example R Markdown summary report and reference files are available upon request. ######
 ###################################################################################################
 
-## 📁 Directory Overview
+## Directory Overview
 
 This folder includes the following components:
 
-### 🔧 Shell Scripts
+### Shell Scripts
 - `FastQC.sh`  
   Perform quality control on raw FASTQ files using **FastQC**.
 
@@ -41,7 +41,7 @@ This folder includes the following components:
   - Read alignment with **STAR**
   - Gene-level quantification with **featureCounts**
 
-### 🧬 R Scripts
+### R Scripts
 
 #### [0.X] Preprocessing and Normalization
 - `0.1_biomart.R`: Retrieve gene annotations using `biomaRt`.

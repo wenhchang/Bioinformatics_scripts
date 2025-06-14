@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 #### 1.2 Run differential expression analysis using Limma; use blocking term to block cell lines
+=======
+#### Run differential expression analysis using Limma
+#### use blocking term to block cell lines
+>>>>>>> 54959003c7d3a49a37f71f3343907f09b11a1e63
 
-rm(list=ls()) # remove all unnecessary intermediate data
+rm(list=ls()) 
 
 # load necessary packages
 
