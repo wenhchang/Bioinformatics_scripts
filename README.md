@@ -1,5 +1,6 @@
 # Bioinformatics Scripts
 
+```
 Project-Root/
 ├── RNA-seq/
 │   ├── QC_STAR_featureCounts/
@@ -26,6 +27,7 @@ Project-Root/
 │
 ├── README.md
 └── LICENSE
+```
 
 # RNA-seq Analysis Pipeline
 
