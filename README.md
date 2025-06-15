@@ -1,6 +1,35 @@
-# RNAseq Analysis Pipeline
+# Bioinformatics Scripts
 
-This repository contains a RNA-seq data analysis pipeline designed for bulk transcriptomic profiling. It integrates shell-based preprocessing (on HPC clusters) with R-based downstream analysis to support a wide range of experimental designs and biological questions.
+Project-Root/
+├── RNA-seq/
+│   ├── QC_STAR_featureCounts/
+│   │   ├── FastQC.sh
+│   │   ├── STAR_FC.sh
+│   │   └── STAR_index.sh
+│   ├── 0.1_biomart.R
+│   ├── 0.2_combined_count_table.R
+│   ├── 0.3_TPM_conversion.R
+│   ├── 1.1_DESeq2_LFCS.R
+│   ├── 1.2_Limma_blocking_term.R
+│   ├── 1.5_Volcano_signatures.R
+│   ├── 2.0_GSEA_ORA.R
+│   ├── 2.5_visualize_Hallmark.R
+│   ├── 3.0_resistance_analysis.R
+│   ├── 4.0_Euler_diagrams.R
+│   ├── 5.0_TCGA_analysis.R
+│   └── 6.0_DepMap_analysis.R
+│
+├── RPPA/
+│   ├── 1.0_preprocessing_QC.R
+│   ├── 2.0_Differential_analysis_Limma.R
+│   └── 3.0_Heatmap_RPPA.R
+│
+├── README.md
+└── LICENSE
+
+# RNA-seq Analysis Pipeline
+
+This repository contains a RNA-seq data analysis pipeline designed for bulk mRNA transcriptomic profiling. It integrates shell-based preprocessing (on HPC clusters) with R-based downstream analysis to support a wide range of experimental designs and biological questions.
 
 This repository is designed as templates for RNA-seq analysis and does NOT contain the reference data tables used in each script. The reference data table and an example R markdown summary file are available upon reasonable request.
 
@@ -74,6 +103,24 @@ This folder includes the following components:
 
 ---
 
+# RPPA (Reverse Phase Protein Array) analysis pipeline
+
+This repository contains a pipeline for processing and analysing Reverse Phase Protein Array (RPPA) data.
+
+### Workflow overview
+All the following analysese are done in R envirnoment.
+1. **Normalization** of the raw RPPA intensity file is performed using median centering.
+2. **Quality control** of the raw RPPA data is performed by PCA analysis and correlation matrix. This ensures the reproducibility between replicates within the same conditons.
+3. **Differential Expression (DE)** is performed using Limma.
+4. **Visualization** of the DE result by heatmap.
+
+### R scripts
+- `1.0_preprocessing_QC.R`: Median centering normalization, PCA analysis, and correlation coeficients matrix analysis to normalize the raw intensities and ensure the quality of the data.
+- `2.0_Differential_analysis_Limma.R`: Conduct Limma-based differential expression analysis.
+- `3.0_Heatmap_RPPA.R`: Visualize the DE result for RPPA.
+
+
+---
 
 ## License
 
