@@ -21,9 +21,7 @@ This repository is designed as templates for RNA-seq analysis and does NOT conta
 
 
 ### NOTE ###
-###################################################################################################
-####### An example R Markdown summary report and reference files are available upon request. ######
-###################################################################################################
+####### An example R Markdown summary report and reference files are available upon request. 
 
 ## Directory Overview
 
