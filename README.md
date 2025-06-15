@@ -25,9 +25,14 @@ Project-Root/
 │   ├── 2.0_Differential_analysis_Limma.R
 │   └── 3.0_Heatmap_RPPA.R
 │
+├── R markdown summaries (Proteomics, RPPA, and RNA-seq) are available upon request.
 ├── README.md
 └── LICENSE
 ```
+
+### NOTE ###
+Example R Markdown summary reports (Proteomics, RPPA, and RNA-seq) are available upon request. 
+
 
 # RNA-seq Analysis Pipeline
 
@@ -50,9 +55,6 @@ This repository is designed as templates for RNA-seq analysis and does NOT conta
 3. **Functional profiling and integration** with external datasets such as TCGA (for clinical correlation) and DepMap (for gene dependency analysis), as well as gene overlap visualization using Euler plots.
 4. **Resistance-related analysis**, including identification of pathways or genes associated with resistance phenotypes.
 
-
-### NOTE ###
-####### An example R Markdown summary report and reference files are available upon request. 
 
 ## Directory Overview
 
